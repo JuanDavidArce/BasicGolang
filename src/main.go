@@ -4,39 +4,25 @@ import "fmt"
 
 func main() {
 
-	// Area Cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-	fmt.Println("area cuadrado: ", areaCuadrado)
+	//Variables declaration
+	helloMessage := "Hello"
+	wordMessage := "world"
 
-	x := 10
-	y := 50
+	// PrintLn
+	fmt.Println(helloMessage, wordMessage)
+	fmt.Println(helloMessage, wordMessage)
 
-	// Suma
-	result := x + y
-	fmt.Println("suma ", result)
+	// Printf
+	nombre := "platzi"
+	cursos := 500
+	fmt.Printf("%s tiene mas de %d cursos\n", nombre, cursos)
+	fmt.Printf("%v tiene mas de %v cursos\n", nombre, cursos)
 
-	// Rexta
-	result = y - x
-	fmt.Println("Resta", result)
+	// Sprintf
+	message := fmt.Sprintf("%s tiene mas de %d cursos", nombre, cursos)
+	fmt.Println(message)
 
-	// Multiplicacion
-	result = x * y
-	fmt.Println("multiplicacion:", result)
-
-	// Division
-	result = y / x
-	fmt.Println("division: ", result)
-
-	// Modulo
-	result = y % x
-	fmt.Println("Modulo: ", result)
-
-	// Incremental
-	x++
-	fmt.Println("Incremental:", x)
-
-	// Decremental
-	x--
-	fmt.Println("Decremental: ", x)
+	// Type of data
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("cursos: %T", cursos)
 }
