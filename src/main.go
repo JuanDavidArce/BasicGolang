@@ -1,20 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"BasicGolang/src/mypackage"
+	"fmt"
+)
 
 func main() {
-	m := make(map[string]int)
-
-	m["Jose"] = 14
-	m["Pepito"] = 20
-	fmt.Println(m)
-
-	// Recorrer un map
-	for indice, valor := range m {
-		fmt.Println(indice, valor)
-	}
-
-	// Encontrar un valor
-	valor, ok := m["Jose"]
-	fmt.Println(valor, ok)
+	var car mypackage.PublicCar
+	car.Brand = "Toyota"
+	car.Year = 2020
+	fmt.Println(car)
 }
