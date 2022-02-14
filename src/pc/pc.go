@@ -15,3 +15,6 @@ func (myPc Pc) Ping() {
 func (myPc *Pc) DuplicateRam() {
 	myPc.Ram = myPc.Ram * 2
 }
+func (myPC Pc) String() string {
+	return fmt.Sprintf("Tengo %d GB de RAM, %d GB de Disco y es un sistema %s.", myPC.Ram, myPC.Disk, myPC.Brand)
+}
