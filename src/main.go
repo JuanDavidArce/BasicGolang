@@ -1,13 +1,32 @@
 package main
 
 import (
-	"BasicGolang/src/mypackage"
+	"BasicGolang/src/pc"
 	"fmt"
 )
 
 func main() {
-	var car mypackage.PublicCar
-	car.Brand = "Toyota"
-	car.Year = 2020
-	fmt.Println(car)
+	a := 50
+	b := &a
+	a = 25
+
+	fmt.Println(b)
+	fmt.Println(*b)
+
+	*b = 100
+	fmt.Println(a)
+
+	myPc := pc.Pc{Ram: 16, Disk: 200, Brand: "msi"}
+	fmt.Println(myPc)
+
+	myPc.Ping()
+
+	fmt.Println(myPc)
+	myPc.DuplicateRam()
+
+	fmt.Println(myPc)
+	myPc.DuplicateRam()
+
+	fmt.Println(myPc)
+
 }
