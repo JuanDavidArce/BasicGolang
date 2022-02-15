@@ -1,11 +1,44 @@
 package main
 
 import (
-	"BasicGolang/src/pc"
 	"fmt"
 )
 
+type figuras2D interface {
+	area() float64
+}
+
+type cuadrado struct {
+	base float64
+}
+
+type rectangulo struct {
+	base   float64
+	altura float64
+}
+
+func calcular(f figuras2D) {
+	fmt.Println("Area: ", f.area())
+}
+
+func (r rectangulo) area() float64 {
+	return r.base * r.altura
+}
+
+func (c cuadrado) area() float64 {
+	return c.base * c.base
+}
 func main() {
-	myPc := pc.Pc{Ram: 16, Brand: "MSI", Disk: 100}
-	fmt.Print(myPc)
+	myCuadrado := cuadrado{base: 2}
+	myRectangulo := rectangulo{base: 2, altura: 4}
+	calcular(myCuadrado)
+	calcular(myRectangulo)
+
+	// Lista interfaces
+	myInterface := []interface{}{"Hola", 12, 4.90}
+	fmt.Println(myInterface...)
+	for indice, valor := range myInterface {
+		fmt.Println(indice, valor)
+	}
+
 }
